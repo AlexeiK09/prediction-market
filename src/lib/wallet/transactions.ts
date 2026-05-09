@@ -14,7 +14,6 @@ import {
   DEPOSIT_WALLET_FACTORY_ADDRESS,
   NEG_RISK_CTF_EXCHANGE_ADDRESS,
   UMA_NEG_RISK_ADAPTER_ADDRESS,
-  UMA_NEG_RISK_ADAPTER_LEGACY_ADDRESS,
   ZERO_COLLECTION_ID,
 } from '@/lib/contracts'
 import {
@@ -289,10 +288,8 @@ export function buildApproveTokenCalls(): WalletCall[] {
     buildConditionalSetApprovalForAllCall(CTF_EXCHANGE_ADDRESS),
     buildCollateralApproveCall(NEG_RISK_CTF_EXCHANGE_ADDRESS),
     buildCollateralApproveCall(UMA_NEG_RISK_ADAPTER_ADDRESS),
-    buildCollateralApproveCall(UMA_NEG_RISK_ADAPTER_LEGACY_ADDRESS),
     buildConditionalSetApprovalForAllCall(NEG_RISK_CTF_EXCHANGE_ADDRESS),
     buildConditionalSetApprovalForAllCall(UMA_NEG_RISK_ADAPTER_ADDRESS),
-    buildConditionalSetApprovalForAllCall(UMA_NEG_RISK_ADAPTER_LEGACY_ADDRESS),
   ]
 }
 
